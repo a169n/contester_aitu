@@ -1,0 +1,14 @@
+#include <iostream>  
+#include <cmath>  
+using namespace std;
+int main()
+{
+  double x, c, a;
+  cin >> x;
+  c = pow(x, 2);
+  a = c;
+  for (int i = 256; i >= 2; i /= 2) {
+    a = i / a + c;
+  }
+  cout << x / a;
+}
