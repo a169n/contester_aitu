@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int year = 1900, d = 7, n;
+  cin >> n;
+  for (int i = 1901; i <= n; i++) {
+    if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0) {
+      d -= 2;
+    }
+    else {
+      d--;
+    }
+    if (d < 1) {
+      d += 7;
+    }  
+  }
+  cout << d;
+}
