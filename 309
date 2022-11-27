@@ -1,0 +1,39 @@
+#include <iostream>  
+using namespace std;
+int main()
+{
+    int d, m, y;
+    cin >> d >> m >> y;
+    d++;
+    if (d == 31 && (m == 4 || m == 6 || m == 9 || m == 11)) { //max 30
+        m++;
+        d = 1;
+    }
+    else if (d == 32) { //max 31
+        d = 1;
+        m++;
+    }
+    else if (d >= 30 && m == 2) {
+        m++;
+        d = 1;
+    }
+    else if ((d == 29 && m == 2)) {
+        if (y % 400 == 0 || (y % 4 == 0 && y % 100 != 0)) { //if leap year
+            m;
+            d;
+        }
+        else if (d == 30 && m == 2) {
+            m++;
+            d = 1;
+        }
+        else {
+            m++;
+            d = 1;
+        }
+    }
+    if (m > 12) {
+        y++;
+        m = 1;
+    }
+    cout << d << " " << m << " " << y;
+}
