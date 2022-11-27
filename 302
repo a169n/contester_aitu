@@ -1,0 +1,16 @@
+week 3 /.
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    double a, b, c;
+    cin >> a >> b >> c;
+    if (a <= b && a <=c && b <= c) {
+        cout << a*2 << endl;
+        cout << b*2 << endl;
+        cout << c*2 << endl;
+    }
+    else {
+        cout << sqrt(a*a) << " " << sqrt(b*b) << " " << sqrt(c*c) << ".0";
+    }
+}
